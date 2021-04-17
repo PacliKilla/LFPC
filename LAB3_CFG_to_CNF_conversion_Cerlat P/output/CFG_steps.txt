@@ -1,0 +1,110 @@
+ELIMINATING EPSILON TRANSITIONS
+variables: {'S', 'C', 'B', 'D', 'A'}
+terminals: {'b', 'd', 'a'}
+productions:
+S => ('d', 'B')
+S => ('A',)
+A => ('d', 'S')
+A => ('d',)
+A => ('a', 'B', 'd', 'B')
+D => ('A', 'B')
+B => ('a',)
+B => ('a', 'S')
+B => ('A',)
+B => ('A', 'C')
+C => ('b', 'C')
+C => ('b',)
+
+ELIMINATING UNIT PRODUCTIONS
+variables: {'S', 'C', 'B', 'D', 'A'}
+terminals: {'b', 'd', 'a'}
+productions:
+S => ('d', 'S')
+S => ('d', 'B')
+S => ('a', 'B', 'd', 'B')
+S => ('d',)
+C => ('b', 'C')
+C => ('b',)
+B => ('a', 'S')
+B => ('d',)
+B => ('a',)
+B => ('d', 'S')
+B => ('a', 'B', 'd', 'B')
+B => ('A', 'C')
+D => ('A', 'B')
+A => ('d', 'S')
+A => ('d',)
+A => ('a', 'B', 'd', 'B')
+
+ELIMINATING USELESS SYMBOLS
+variables: {'S', 'C', 'B', 'A'}
+terminals: {'b', 'd', 'a'}
+productions:
+S => ('d', 'S')
+S => ('d', 'B')
+S => ('a', 'B', 'd', 'B')
+S => ('d',)
+C => ('b', 'C')
+C => ('b',)
+B => ('a', 'S')
+B => ('d',)
+B => ('a',)
+B => ('d', 'S')
+B => ('a', 'B', 'd', 'B')
+B => ('A', 'C')
+A => ('d', 'S')
+A => ('d',)
+A => ('a', 'B', 'd', 'B')
+
+MAKING BODIES OF LENGTH >= 2 CONSIST OF VARIABLES
+variables: {'T3', 'T1', 'S', 'T2', 'C', 'B', 'A'}
+terminals: {'b', 'd', 'a'}
+productions:
+S => ('T1', 'S')
+S => ('d',)
+S => ('T1', 'B')
+S => ('T2', 'B', 'T1', 'B')
+C => ('T3', 'C')
+C => ('b',)
+B => ('d',)
+B => ('a',)
+B => ('T1', 'S')
+B => ('T2', 'B', 'T1', 'B')
+B => ('T2', 'S')
+B => ('A', 'C')
+A => ('T1', 'S')
+A => ('d',)
+A => ('T2', 'B', 'T1', 'B')
+T1 => d
+T2 => a
+T3 => b
+
+BREAKING UP BODIES OF LENGTH > 2
+variables: {'T3', 'T1', 'T7', 'T8', 'S', 'T9', 'T2', 'C', 'B', 'T4', 'T5', 'T6', 'A'}
+terminals: {'b', 'd', 'a'}
+productions:
+S => ('T2', 'T4')
+S => ('T1', 'S')
+S => ('d',)
+S => ('T1', 'B')
+C => ('T3', 'C')
+C => ('b',)
+B => ('d',)
+B => ('a',)
+B => ('T1', 'S')
+B => ('T2', 'T6')
+B => ('T2', 'S')
+B => ('A', 'C')
+A => ('T2', 'T8')
+A => ('T1', 'S')
+A => ('d',)
+T1 => d
+T2 => a
+T3 => b
+T4 => ('B', 'T5')
+T5 => ('T1', 'B')
+T6 => ('B', 'T7')
+T7 => ('T1', 'B')
+T8 => ('B', 'T9')
+T9 => ('T1', 'B')
+

@@ -1,0 +1,21 @@
+{
+	"Variables": ["S","A","B","C","D"],
+	"Terminals": ["a", "b", "d"],
+	"Productions": [
+		{"head": "S", "body": ["d", "B"]},
+		{"head": "A", "body": ["a", "B", "d", "B"]},
+		{"head": "D", "body": ["A", "B"]},
+		{"head": "S", "body": ["A"]},
+		{"head": "B", "body": ["a"]},
+		{"head": "C", "body": ["b", "C"]},
+		{"head": "A", "body": ["d"]},
+		{"head": "B", "body": ["a", "S"]},
+		{"head": "C", "body": []},
+		{"head": "A", "body": ["d", "S"]},
+		{"head": "B", "body": ["A", "C"]}
+
+	],
+	"_comment": "Symbols may be multiple characters long, this is why each character in the body is it's own string.",
+	
+	"Start": "S"
+}
