@@ -1,4 +1,4 @@
-# CFG-to-CNF-conversion
+#  Context-free grammars to  Chomsky normal form 
 A small code project written in Python to illustrate the conversion  context-free grammars (CFG) to  Chomsky normal form (CNF). 
 
 To perform a conversion of a CFG to CNF follow these steps:
