@@ -3,7 +3,7 @@ A small code project written in Python to illustrate the conversion  context-fre
 
 To perform a conversion of a CFG to CNF follow these steps:
 
-1) Put the json file representing the CFG you want to convert into the resources folder. My Variant is already there.
+1) Put the json file representing the CFG you want to convert into the resources folder (my Variant is already there).
 
 2) Run the "run.py" script located in the root directory of the project.
 
